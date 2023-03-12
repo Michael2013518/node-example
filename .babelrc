@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      //预设支持当前版本所能支持的所有 JavaScript 的正式标准
+      "@babel/env",
+    {
+      // 设置为目标市场占有率高于0.25%其依然在维护中的浏览器
+      // "targets": "> 0.25%, not dead",
+      "targets": {
+        "chrome": 59
+      },
+      // 根据实际用到的API以及编译目标浏览器，从core-js中按需添加需要的polyfill
+      "useBuiltIns": "usage", 
+      // 使用core-js 3.x版本
+      "corejs": 3
+    }
+    ]
+  ]
+}
